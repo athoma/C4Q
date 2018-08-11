@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="03J-JP-ULc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather Controller-->
+        <scene sceneID="sul-iA-aEl">
+            <objects>
+                <viewController id="03J-JP-ULc" customClass="WeatherController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ivt-gl-ve3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztf-y0-o9r">
+                                <rect key="frame" x="16" y="134" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHg-Pz-4PH">
+                                <rect key="frame" x="16" y="308" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MK-qe-Ahq">
+                                <rect key="frame" x="118" y="396" width="138" height="30"/>
+                                <state key="normal" title="Switch Temperature"/>
+                                <connections>
+                                    <action selector="switchTemp:" destination="03J-JP-ULc" eventType="touchUpInside" id="vCg-8H-9zU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uJ-yw-7N7">
+                                <rect key="frame" x="16" y="225" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9MK-qe-Ahq" firstAttribute="top" secondItem="eHg-Pz-4PH" secondAttribute="bottom" constant="67" id="0DK-AU-aS5"/>
+                            <constraint firstItem="eHg-Pz-4PH" firstAttribute="centerX" secondItem="E4c-O1-5jw" secondAttribute="centerX" id="0P3-7S-D7Z"/>
+                            <constraint firstItem="9MK-qe-Ahq" firstAttribute="centerX" secondItem="E4c-O1-5jw" secondAttribute="centerX" id="KaC-Zh-B8M"/>
+                            <constraint firstItem="ztf-y0-o9r" firstAttribute="centerX" secondItem="E4c-O1-5jw" secondAttribute="centerX" id="M6n-8y-Qu0"/>
+                            <constraint firstItem="eHg-Pz-4PH" firstAttribute="top" secondItem="2uJ-yw-7N7" secondAttribute="bottom" constant="62" id="THu-12-67b"/>
+                            <constraint firstItem="2uJ-yw-7N7" firstAttribute="top" secondItem="ztf-y0-o9r" secondAttribute="bottom" constant="70" id="avJ-8x-V6Y"/>
+                            <constraint firstItem="ztf-y0-o9r" firstAttribute="top" secondItem="E4c-O1-5jw" secondAttribute="top" constant="114" id="bIu-tS-FUa"/>
+                            <constraint firstItem="2uJ-yw-7N7" firstAttribute="centerX" secondItem="E4c-O1-5jw" secondAttribute="centerX" id="rmm-DB-N3g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E4c-O1-5jw"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentTemp" destination="2uJ-yw-7N7" id="S1X-Gm-JGZ"/>
+                        <outlet property="dayLabel" destination="eHg-Pz-4PH" id="ekR-4M-PCj"/>
+                        <outlet property="weatherLabel" destination="ztf-y0-o9r" id="21l-xx-yrz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pO-Zr-ACt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-748" y="105.69715142428787"/>
+        </scene>
+    </scenes>
+</document>
